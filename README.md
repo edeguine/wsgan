@@ -5,14 +5,15 @@
 The network presented here is a straight-up implementation of the spatial GAN in PyTorch (ported over from the author's Lasgane implementation https://github.com/zalandoresearch/spatial_gan ) as well as an adaptation to use the Wasserstein method for training.
 
 The spatial GAN is described in this paper: https://arxiv.org/abs/1611.08207
+
 Wasserstein GAN (WGAN) training is described in this paper: https://arxiv.org/abs/1701.07875
 
 
-The WGAN is currently not working as well as expected with my datasets as the regular implementation, so it is work in progress.
+The WGAN is currently not working as well as expected with my datasets, so it is work in progress.
 
 ### Requirements
 
-You will need to install Pill `pip install Pillow` and PyTorch.
+You will need to install PIL `pip install Pillow` and PyTorch.
 
 ### Usage 
 
@@ -26,7 +27,7 @@ filenames
 flower1
 flower2
 flowerbig
-```
+````
 
 It indicates which files to use for training. In this case it corresponds to the files flower1.png, flower2.png, flowerbig.png.
 

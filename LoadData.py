@@ -83,7 +83,7 @@ def examine(image):
     print(image[:,:,:])
 
 def test():
-    dataset = loadDataset("wallpaper", 257)
+    dataset = loadDataset("dataset", 257)
     im, label = dataset[0]
     examine(im)
 

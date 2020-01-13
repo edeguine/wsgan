@@ -32,7 +32,8 @@ flowerbig
 It indicates which files to use for training. In this case it corresponds to the files flower1.png, flower2.png, flowerbig.png.
 
 If this is inconvenient, feel free to modify LoadData to load your dataset.
-Important note: the network takes input in the range [-1, 1] so make sure your normalize your data.
+
+Important note: the network takes input in the range [-1, 1] so make sure you normalize your data.
 
 ### Screenshots
 

@@ -10,7 +10,7 @@ import LoadData
 fake_label = 0
 real_label = 1
 cuda = True 
-datasetVersion = 'floralbig'
+datasetVersion = 'dataset'
 
 class Config():
     def __init__(self, batchSize):

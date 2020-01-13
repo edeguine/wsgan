@@ -8,6 +8,7 @@ import numpy
 import LoadData
 
 cuda = True 
+datasetVersion = 'dataset'
 
 class Config():
     def __init__(self, batchSize):
@@ -185,7 +186,7 @@ def main():
     print(gen)
     print(dis)
 
-    trainset = LoadData.loadDataset('floralbig', config.npx)
+    trainset = LoadData.loadDataset(datasetVersion, config.npx)
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=config.batchSize, shuffle=True, num_workers=2)
 
     optimizerG = optim.Adam(gen.parameters(), lr=config.lr, betas=(config.b1, 0.999)) #, weight_decay=config.l2Fac)
@@ -290,7 +291,7 @@ def main():
                 im[:, :, 0] = imfake[0, :, :]
                 im[:, :, 1] = imfake[1, :, :]
                 im[:, :, 2] = imfake[2, :, :]
-                io.imsave(f"samples/torch_sample_floralbig_{epoch}.png", im)
+                io.imsave(f"samples/torch_sample_{datasetVersion}_{epoch}.png", im)
 
         if epoch % 50 == 0:
             torch.save(gen.state_dict(), f"models/gen_{epoch}.pth")
